@@ -1,56 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>My Personal Website</title>
   <style>
     body {
       font-family: "Segoe UI", sans-serif;
       margin: 0;
-      background-color: #121212;
-      color: #333;
+      background: linear-gradient(135deg, #e0f7fa, #80deea);
+      color: #222;
+      scroll-behavior: smooth;
     }
     header {
-      background: linear-gradient(135deg, #007bff, #00d4ff);
+      background-color: #007bff;
       color: white;
       text-align: center;
-      padding: 4rem 1rem;
+      padding: 3rem 1rem;
     }
     header h1 {
       margin: 0;
-      font-size: 3rem;
+      font-size: 2.5rem;
     }
-    header p {
-      font-size: 1.2rem;
+    nav {
+      background: #005ecb;
+      text-align: center;
+      padding: 0.5rem;
+      position: sticky;
+      top: 0;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 1rem;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
     }
     section {
-      max-width: 800px;
+      max-width: 900px;
       margin: 2rem auto;
-      padding: 1rem;
+      padding: 1.5rem;
       background: white;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     }
-    h2 {
+    section h2 {
+      color: #007bff;
       border-bottom: 2px solid #007bff;
-      padding-bottom: 0.3rem;
+      padding-bottom: 0.5rem;
     }
     img {
       max-width: 100%;
       border-radius: 8px;
     }
+    video {
+      width: 100%;
+      border-radius: 8px;
+    }
     footer {
       text-align: center;
-      margin: 3rem 0 1rem;
+      padding: 1rem;
       color: #666;
-    }
-    a {
-      color: #007bff;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
+      font-size: 0.9rem;
+      margin-top: 2rem;
     }
     .contact a {
       display: inline-block;
@@ -59,6 +73,7 @@
       background: #007bff;
       color: white;
       border-radius: 6px;
+      text-decoration: none;
     }
     .contact a:hover {
       background: #005ecb;
@@ -66,46 +81,54 @@
   </style>
 </head>
 <body>
+
   <header>
     <h1>Hi, I'm Mengjie Zhang</h1>
-    <p>MEng Electrical and Electronic Engineering • MSc Robotics </p>
+    <p>AI Enthusiast • Engineer • Creator</p>
   </header>
 
-  <section>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#videos">Videos</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="about">
     <h2>About Me</h2>
-    <p>I have worked on various interdisciplinary projects involving AI, computer science, electronic engineering and robotis. I've had over 4 years of experiences in engineering design and 6 months of experience in academic research projects. I also enjoy listening to music, 3D animation, going to gym and playing video games. Some of my favourite films includes Iron man 1-3, interstellar and Now You See Me 1-2</p>
-    <img src="images/profile.jpg" alt="My photo">
+    <p>Hello! I’m passionate about artificial intelligence, robotics, and creative design. This website showcases my projects and ideas. Built with plain HTML and hosted free on GitHub Pages.</p>
+    <img src="images/profile.jpg" alt="Profile picture">
   </section>
 
-  <section>
+  <section id="projects">
     <h2>Projects</h2>
-    <p>Here are some things I’ve worked on:</p>
     <ul>
-      <li>🤖 Robotics perception using DepthAI and Mediapipe</li>
-      <li>🧠 Knowledge Distillation + NAS research for transformer models</li>
-      <li>⚙️ Modular NEAT agents for MuJoCo control tasks</li>
+      <li>🤖 DepthAI + Mediapipe for real-time face & object detection</li>
+      <li>🧠 Knowledge Distillation with Neural Architecture Search on GLUE tasks</li>
+      <li>⚙️ Modular NEAT controllers for MuJoCo agents</li>
     </ul>
-    <img src="images/project_banner.jpg" alt="Project banner">
+    <img src="images/project_banner.jpg" alt="Projects image">
   </section>
 
-  <section>
-    <h2>Video Demo</h2>
-    <video width="100%" controls>
-      <source src="videos/demo.mp4" type="video/mp4">
+  <section id="videos">
+    <h2>Videos</h2>
+    <p>Here’s a short demo of my robotics project:</p>
+    <video controls>
+      <source src="videos/demo.mp4" type="video/mp4" />
       Your browser does not support the video tag.
     </video>
   </section>
 
-  <section class="contact">
-    <h2>Contact Me</h2>
+  <section id="contact" class="contact">
+    <h2>Contact</h2>
     <p>Let’s connect!</p>
-    <a href="jerrymym23@gmail.com">📧 Email</a>
+    <a href="mailto:mengjie@example.com">📧 Email</a>
     <a href="https://www.linkedin.com/in/yourprofile">💼 LinkedIn</a>
     <a href="https://github.com/jerry7234234">💻 GitHub</a>
   </section>
 
   <footer>
-    <p>© 2025 Mengjie Zhang — Built with 💙 and GitHub Pages</p>
+    <p>© 2025 Mengjie Zhang — Built with 💙 using GitHub Pages</p>
   </footer>
 </body>
 </html>
