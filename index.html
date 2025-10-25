@@ -6,7 +6,7 @@
   <title>Mengjie Zhang — Personal Website</title>
   <style>
     :root {
-      --primary: #007bff;
+      --primary: #7d90b0;
       --background: #e0f7fa;
       --text: #222;
       --card-bg: #fff;
@@ -327,32 +327,4 @@
     backToTop.onclick = () => window.scrollTo({ top: 0, behavior: "smooth" });
 
     // Smooth scroll for navigation
-    document.querySelectorAll('.nav-link').forEach(link => {
-      link.addEventListener('click', e => {
-        e.preventDefault();
-        document.querySelector(link.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
-      });
-    });
-
-    // Carousel logic (for both Projects and Videos)
-    function setupCarousel(containerId, leftBtnId, rightBtnId) {
-      const carousel = document.getElementById(containerId);
-      const frames = carousel.querySelectorAll(".carousel-frame");
-      let index = 0;
-
-      function showFrame(i) {
-        if (i < 0) i = 0;
-        if (i >= frames.length) i = frames.length - 1;
-        index = i;
-        carousel.style.transform = `translateX(-${index * 100}%)`;
-      }
-
-      document.getElementById(leftBtnId).onclick = () => showFrame(index - 1);
-      document.getElementById(rightBtnId).onclick = () => showFrame(index + 1);
-    }
-
-    setupCarousel("projectCarousel", "projLeft", "projRight");
-    setupCarousel("videoCarousel", "vidLeft", "vidRight");
-  </script>
-</body>
-</html>
+    document.querySelectorAll('.
