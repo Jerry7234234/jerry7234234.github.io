@@ -159,10 +159,12 @@
 
     .video-carousel {
       display: flex;
+      justify-content: center;
       gap: 1rem;
-      overflow-x: scroll;
+      overflow-x: auto;
       scroll-behavior: smooth;
       padding: 1rem 0;
+      scroll-snap-type: x mandatory;
     }
 
     .video-carousel::-webkit-scrollbar {
@@ -173,6 +175,7 @@
       flex: 0 0 80%;
       max-width: 80%;
       border-radius: 10px;
+      scroll-snap-align: center;
     }
 
     .carousel-btn {
@@ -195,11 +198,11 @@
     }
 
     .carousel-btn.left {
-      left: -10px;
+      left: 5px;
     }
 
     .carousel-btn.right {
-      right: -10px;
+      right: 5px;
     }
 
     @media (max-width: 700px) {
@@ -307,13 +310,23 @@
       });
     });
 
-    // Video Carousel Controls
+    // Video Carousel Controls (scrolls exactly one video per click)
     const videoCarousel = document.getElementById("videoCarousel");
+    const videos = videoCarousel.querySelectorAll("video");
+    let currentVideo = 0;
+
     document.getElementById("scrollLeft").onclick = () => {
-      videoCarousel.scrollBy({ left: -400, behavior: "smooth" });
+      if (currentVideo > 0) {
+        currentVideo--;
+        videos[currentVideo].scrollIntoView({ behavior: "smooth", inline: "center" });
+      }
     };
+
     document.getElementById("scrollRight").onclick = () => {
-      videoCarousel.scrollBy({ left: 400, behavior: "smooth" });
+      if (currentVideo < videos.length - 1) {
+        currentVideo++;
+        videos[currentVideo].scrollIntoView({ behavior: "smooth", inline: "center" });
+      }
     };
   </script>
 </body>
