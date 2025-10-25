@@ -21,12 +21,15 @@
       --footer-text: #999;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       font-family: "Segoe UI", sans-serif;
       margin: 0;
       background: linear-gradient(135deg, var(--background), #80deea);
       color: var(--text);
-      scroll-behavior: smooth;
       transition: background 0.5s, color 0.5s;
     }
 
@@ -56,6 +59,7 @@
       text-decoration: none;
       margin: 0 1rem;
       font-weight: bold;
+      cursor: pointer;
     }
 
     nav a:hover {
@@ -215,10 +219,10 @@
   </header>
 
   <nav>
-    <a href="#about">About Me</a>
-    <a href="#projects">Projects</a>
-    <a href="#videos">Videos</a>
-    <a href="#contact">Contact</a>
+    <a href="#about" class="nav-link">About Me</a>
+    <a href="#projects" class="nav-link">Projects</a>
+    <a href="#videos" class="nav-link">Videos</a>
+    <a href="#contact" class="nav-link">Contact</a>
   </nav>
 
   <section id="about">
@@ -293,6 +297,15 @@
     backToTop.onclick = function () {
       window.scrollTo({ top: 0, behavior: "smooth" });
     };
+
+    // Smooth scroll for navigation links (extra support for Safari)
+    document.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const target = document.querySelector(link.getAttribute('href'));
+        target.scrollIntoView({ behavior: 'smooth' });
+      });
+    });
 
     // Video Carousel Controls
     const videoCarousel = document.getElementById("videoCarousel");
