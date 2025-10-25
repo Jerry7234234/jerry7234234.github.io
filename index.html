@@ -276,16 +276,19 @@
           <video controls>
             <source src="your-video1.mp4" type="video/mp4">
           </video>
+          <p><strong>Video 1:</strong> Demonstration of AI Controller in action on robotic agent.</p>
         </div>
         <div class="carousel-frame">
           <video controls>
             <source src="your-video2.mp4" type="video/mp4">
           </video>
+          <p><strong>Video 2:</strong> DepthAI and Mediapipe real-time perception pipeline demo.</p>
         </div>
         <div class="carousel-frame">
           <video controls>
             <source src="your-video3.mp4" type="video/mp4">
           </video>
+          <p><strong>Video 3:</strong> Simulation of magnetic confinement dynamics.</p>
         </div>
       </div>
       <button class="carousel-btn right" id="vidRight">▶</button>
@@ -327,4 +330,32 @@
     backToTop.onclick = () => window.scrollTo({ top: 0, behavior: "smooth" });
 
     // Smooth scroll for navigation
-    document.querySelectorAll('.
+    document.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', e => {
+        e.preventDefault();
+        document.querySelector(link.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+
+    // Carousel logic (for both Projects and Videos)
+    function setupCarousel(containerId, leftBtnId, rightBtnId) {
+      const carousel = document.getElementById(containerId);
+      const frames = carousel.querySelectorAll(".carousel-frame");
+      let index = 0;
+
+      function showFrame(i) {
+        if (i < 0) i = 0;
+        if (i >= frames.length) i = frames.length - 1;
+        index = i;
+        carousel.style.transform = `translateX(-${index * 100}%)`;
+      }
+
+      document.getElementById(leftBtnId).onclick = () => showFrame(index - 1);
+      document.getElementById(rightBtnId).onclick = () => showFrame(index + 1);
+    }
+
+    setupCarousel("projectCarousel", "projLeft", "projRight");
+    setupCarousel("videoCarousel", "vidLeft", "vidRight");
+  </script>
+</body>
+</html>
