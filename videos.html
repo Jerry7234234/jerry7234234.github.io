@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Videos — Mengjie Zhang</title>
+
+  <style>
+    :root {
+      --primary: #7d90b0;
+      --background: #f2f2eb;
+      --text: #222;
+      --card-bg: #fff;
+    }
+
+    body {
+      font-family: "Segoe UI", sans-serif;
+      margin: 0;
+      background: linear-gradient(135deg, var(--background), #80deea);
+      color: var(--text);
+    }
+
+    header {
+      background: var(--primary);
+      color: white;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    nav {
+      background: #56574f;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    section {
+      max-width: 1100px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background: var(--card-bg);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      color: var(--primary);
+      border-bottom: 2px solid var(--primary);
+      padding-bottom: 0.5rem;
+    }
+
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .video-card {
+      background: white;
+      padding: 1rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .video-card video {
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    .video-card p {
+      margin-top: 1rem;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>Videos</h1>
+    <p>Research demos, robotics systems, and simulations.</p>
+  </header>
+
+  <nav>
+    <a href="index.html">← Back to Homepage</a>
+  </nav>
+
+  <section>
+    <h2>Project Demonstrations</h2>
+
+    <div class="video-grid">
+
+      <div class="video-card">
+        <video controls>
+          <source src="https://github.com/Jerry7234234/jerry7234234.github.io/raw/main/videos/your-video1.mp4" type="video/mp4">
+        </video>
+        <p>
+          <strong>Video 1:</strong>
+          Demonstration of AI Controller in action on robotic agent.
+        </p>
+      </div>
+
+      <div class="video-card">
+        <video controls>
+          <source src="https://github.com/Jerry7234234/jerry7234234.github.io/raw/main/videos/your-video2.mp4" type="video/mp4">
+        </video>
+        <p>
+          <strong>Video 2:</strong>
+          DepthAI and Mediapipe real-time perception pipeline demo.
+        </p>
+      </div>
+
+      <div class="video-card">
+        <video controls>
+          <source src="https://github.com/Jerry7234234/jerry7234234.github.io/raw/main/videos/your-video3.mp4" type="video/mp4">
+        </video>
+        <p>
+          <strong>Video 3:</strong>
+          Simulation of magnetic confinement dynamics.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+</body>
+</html>
