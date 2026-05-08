@@ -222,6 +222,29 @@
         max-height: 300px;
       }
     }
+
+    /* Videos Page Button */
+    .video-page-btn {
+      display: inline-block;
+      margin-top: 2rem;
+      padding: 0.9rem 1.5rem;
+      background: var(--primary);
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: background 0.3s, transform 0.2s;
+    }
+    
+    .video-page-btn:hover {
+      background: #005ecb;
+      transform: translateY(-2px);
+    }
+    
+    .video-button-container {
+      text-align: center;
+      margin-top: 1.5rem;
+    }
   </style>
 </head>
 <body>
@@ -302,6 +325,12 @@
         </div>
       </div>
       <button class="carousel-btn right" id="vidRight">▶</button>
+    </div>
+    
+    <div class="video-button-container">
+      <a href="videos.html" class="video-page-btn">
+        View Full Video Portfolio →
+      </a>
     </div>
   </section>
 
