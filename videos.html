@@ -178,6 +178,50 @@
     html {
       scroll-behavior: smooth;
     }
+
+    /* PDF Dropdown */
+    .pdf-dropdown {
+      margin-top: 1.5rem;
+    }
+    
+    .pdf-dropdown button {
+      background: var(--primary);
+      color: white;
+      border: none;
+      padding: 0.8rem 1.2rem;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1rem;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+    
+    .pdf-dropdown button:hover {
+      background: #005ecb;
+    }
+    
+    .pdf-links {
+      display: none;
+      margin-top: 1rem;
+      background: #f8f8f8;
+      border-radius: 10px;
+      padding: 1rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    
+    .pdf-links a {
+      display: block;
+      margin-bottom: 0.8rem;
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 500;
+      transition: transform 0.2s;
+    }
+    
+    .pdf-links a:hover {
+      transform: translateX(4px);
+      text-decoration: underline;
+    }
   </style>
 </head>
 
@@ -274,6 +318,33 @@
 
     <h3>Leorover mobile robot project</h3>
 
+    <div class="pdf-dropdown">
+    
+      <button onclick="togglePDFs()">
+        View Project Documents ▼
+      </button>
+    
+      <div class="pdf-links" id="pdfMenu">
+    
+        <a href="https://github.com/Jerry7234234/jerry7234234.github.io/raw/main/documents/file1.pdf"
+           target="_blank">
+           Project Report PDF
+        </a>
+    
+        <a href="https://github.com/Jerry7234234/jerry7234234.github.io/raw/main/documents/file2.pdf"
+           target="_blank">
+           Technical Documentation PDF
+        </a>
+    
+        <a href="https://github.com/Jerry7234234/jerry7234234.github.io/raw/main/documents/file3.pdf"
+           target="_blank">
+           Research Notes PDF
+        </a>
+    
+      </div>
+    
+    </div>
+
     <video controls>
       <source src="https://github.com/Jerry7234234/jerry7234234.github.io/raw/main/videos/your-video3.mp4" type="video/mp4">
     </video>
@@ -312,6 +383,18 @@
   </div>
 
 </section>
+
+<script>
+  function togglePDFs() {
+    const menu = document.getElementById("pdfMenu");
+
+    if (menu.style.display === "block") {
+      menu.style.display = "none";
+    } else {
+      menu.style.display = "block";
+    }
+  }
+</script>
 
 </body>
 </html>
