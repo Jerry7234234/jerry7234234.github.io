@@ -83,10 +83,114 @@
       line-height: 1.7;
       margin-top: 1rem;
     }
+
+    /* Floating Project Navigation Sidebar */
+    .project-sidebar {
+      position: fixed;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      z-index: 1000;
+    }
+    
+    /* Main Hover Button */
+    .sidebar-toggle {
+      background: var(--primary);
+      color: white;
+      padding: 1rem 0.8rem;
+      writing-mode: vertical-rl;
+      transform: rotate(180deg);
+      font-weight: bold;
+      border-radius: 0 10px 10px 0;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      transition: background 0.3s;
+    }
+    
+    .sidebar-toggle:hover {
+      background: #005ecb;
+    }
+    
+    /* Dropdown Panel */
+    .sidebar-menu {
+      position: absolute;
+      left: 60px;
+      top: 0;
+      background: white;
+      min-width: 260px;
+      border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+      padding: 1rem;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateX(-10px);
+      transition: all 0.3s ease;
+    }
+    
+    /* Show Menu On Hover */
+    .project-sidebar:hover .sidebar-menu {
+      opacity: 1;
+      visibility: visible;
+      transform: translateX(0);
+    }
+    
+    .sidebar-menu a {
+      display: block;
+      color: var(--text);
+      text-decoration: none;
+      padding: 0.7rem 1rem;
+      border-radius: 8px;
+      margin-bottom: 0.5rem;
+      transition: background 0.2s, transform 0.2s;
+      font-weight: 500;
+    }
+    
+    .sidebar-menu a:hover {
+      background: #f0f0f0;
+      transform: translateX(4px);
+    }
+    
+    /* Smooth Scrolling */
+    html {
+      scroll-behavior: smooth;
+    }
   </style>
 </head>
 
 <body>
+
+  <!-- Floating Sidebar Navigation -->
+  <div class="project-sidebar">
+  
+    <div class="sidebar-toggle">
+      PROJECTS
+    </div>
+  
+    <div class="sidebar-menu">
+  
+      <a href="#project1">
+        Autonomous Moon Rover
+      </a>
+  
+      <a href="#project2">
+        Self-Balancing Robot
+      </a>
+  
+      <a href="#project3">
+        BIM AI Companion
+      </a>
+  
+      <a href="#project4">
+        Movendor Robot
+      </a>
+  
+      <a href="#project5">
+        Neuroevolution Robotics
+      </a>
+  
+    </div>
+  
+  </div>
 
   <header>
     <h1>Projects</h1>
@@ -102,7 +206,7 @@
     <h2>Project Portfolio</h2>
 
     <!-- PROJECT 1 -->
-    <div class="project-section">
+    <div class="project-section" id="project1">
 
       <h3>Autonomous Moon Rover</h3>
 
@@ -122,7 +226,7 @@
     </div>
 
     <!-- PROJECT 2 -->
-    <div class="project-section">
+    <div class="project-section" id="project2">
 
       <h3>Self-Balancing Maze Solving Robot</h3>
 
@@ -142,7 +246,7 @@
     </div>
 
     <!-- PROJECT 3 -->
-    <div class="project-section">
+    <div class="project-section" id="project3">
 
       <h3>BIM AI Companion Robot</h3>
 
@@ -161,7 +265,7 @@
     </div>
 
     <!-- PROJECT 4 -->
-    <div class="project-section">
+    <div class="project-section" id="project4">
 
       <h3>Movendor Smart Robotic Vendor</h3>
 
@@ -181,7 +285,7 @@
     </div>
 
     <!-- PROJECT 5 -->
-    <div class="project-section">
+    <div class="project-section" id="project5">
 
       <h3>Neuroevolution Robotics System</h3>
 
