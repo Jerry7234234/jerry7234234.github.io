@@ -75,6 +75,38 @@
     .video-card p {
       margin-top: 1rem;
     }
+
+    /* Individual Video Sections */
+    .video-section {
+      margin-top: 3rem;
+      padding-bottom: 3rem;
+      border-bottom: 1px solid #ccc;
+    }
+    
+    .video-section:last-child {
+      border-bottom: none;
+    }
+    
+    .video-section h3 {
+      color: var(--primary);
+      margin-bottom: 1rem;
+      font-size: 1.8rem;
+    }
+    
+    .video-section video {
+      width: 100%;
+      max-width: 900px;
+      display: block;
+      margin: 1.5rem auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+    
+    .video-section p {
+      font-size: 1.05rem;
+      line-height: 1.7;
+      margin-top: 1rem;
+    }
   </style>
 </head>
 
@@ -89,43 +121,77 @@
     <a href="index.html">← Back to Homepage</a>
   </nav>
 
-  <section>
-    <h2>Project Demonstrations</h2>
+<section>
+  <h2>Project Demonstrations</h2>
 
-    <div class="video-grid">
+  <!-- VIDEO 1 -->
+  <div class="video-section">
 
-      <div class="video-card">
-        <video controls>
-          <source src="https://github.com/Jerry7234234/jerry7234234.github.io/raw/main/videos/your-video1.mp4" type="video/mp4">
-        </video>
-        <p>
-          <strong>Video 1:</strong>
-          Demonstration of AI Controller in action on robotic agent.
-        </p>
-      </div>
+    <h3>AI Robotic Controller Demonstration</h3>
 
-      <div class="video-card">
-        <video controls>
-          <source src="https://github.com/Jerry7234234/jerry7234234.github.io/raw/main/videos/your-video2.mp4" type="video/mp4">
-        </video>
-        <p>
-          <strong>Video 2:</strong>
-          DepthAI and Mediapipe real-time perception pipeline demo.
-        </p>
-      </div>
+    <video controls>
+      <source src="https://github.com/Jerry7234234/jerry7234234.github.io/raw/main/videos/your-video1.mp4" type="video/mp4">
+    </video>
 
-      <div class="video-card">
-        <video controls>
-          <source src="https://github.com/Jerry7234234/jerry7234234.github.io/raw/main/videos/your-video3.mp4" type="video/mp4">
-        </video>
-        <p>
-          <strong>Video 3:</strong>
-          Simulation of magnetic confinement dynamics.
-        </p>
-      </div>
+    <p>
+      This project demonstrates an AI-based robotic control system capable
+      of autonomous decision-making and navigation. The controller was designed
+      to process environmental inputs in real-time and generate adaptive movement
+      strategies for the robotic platform.
+    </p>
 
-    </div>
-  </section>
+    <p>
+      Technologies used include machine learning algorithms, robotics control
+      systems, and real-time sensor integration for intelligent agent behaviour.
+    </p>
+
+  </div>
+
+  <!-- VIDEO 2 -->
+  <div class="video-section">
+
+    <h3>DepthAI + MediaPipe Perception Pipeline</h3>
+
+    <video controls>
+      <source src="https://github.com/Jerry7234234/jerry7234234.github.io/raw/main/videos/your-video2.mp4" type="video/mp4">
+    </video>
+
+    <p>
+      This demonstration showcases a real-time computer vision perception pipeline
+      developed using DepthAI and Google's MediaPipe framework. The system performs
+      human and object perception tasks with low latency.
+    </p>
+
+    <p>
+      The pipeline integrates embedded AI acceleration, camera depth estimation,
+      and pose/feature tracking to support robotics and intelligent interactive systems.
+    </p>
+
+  </div>
+
+  <!-- VIDEO 3 -->
+  <div class="video-section">
+
+    <h3>Magnetic Confinement Simulation</h3>
+
+    <video controls>
+      <source src="https://github.com/Jerry7234234/jerry7234234.github.io/raw/main/videos/your-video3.mp4" type="video/mp4">
+    </video>
+
+    <p>
+      This simulation visualises magnetic confinement dynamics and particle
+      interactions under electromagnetic fields. The project explores computational
+      modelling techniques used in physics simulations and plasma-related systems.
+    </p>
+
+    <p>
+      The simulation was developed to investigate stability behaviours and dynamic
+      particle motion using numerical modelling approaches and scientific computation tools.
+    </p>
+
+  </div>
+
+</section>
 
 </body>
 </html>
