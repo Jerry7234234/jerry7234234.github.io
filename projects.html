@@ -69,19 +69,55 @@
       margin-bottom: 1rem;
     }
 
-    .project-section img {
-      width: 50%;
-      max-width: 900px;
-      display: block;
-      margin: 1.5rem auto;
+    /* Project Content Layout */
+    .project-content {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      margin-top: 2rem;
+      flex-wrap: wrap;
+    }
+    
+    /* Alternate layout for even projects */
+    .project-section:nth-child(even) .project-content {
+      flex-direction: row-reverse;
+    }
+    
+    /* Project Images */
+    .project-content img {
+      flex: 1;
+      min-width: 320px;
+      max-width: 500px;
+      width: 100%;
+      height: auto;
+      object-fit: contain;
       border-radius: 10px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.2);
     }
-
-    .project-section p {
+    
+    /* Text Content */
+    .project-text {
+      flex: 1;
+      min-width: 300px;
+    }
+    
+    .project-text p {
       font-size: 1.05rem;
-      line-height: 1.7;
+      line-height: 1.8;
       margin-top: 1rem;
+    }
+    
+    /* Mobile Layout */
+    @media (max-width: 900px) {
+    
+      .project-content,
+      .project-section:nth-child(even) .project-content {
+        flex-direction: column;
+      }
+    
+      .project-content img {
+        max-width: 100%;
+      }
     }
 
     /* Floating Project Navigation Sidebar */
@@ -207,22 +243,30 @@
 
     <!-- PROJECT 1 -->
     <div class="project-section" id="project1">
-
+    
       <h3>Autonomous Moon Rover</h3>
-
-      <img src="images/project1.png" alt="Moon Rover Project">
-
-      <p>
-        This project involved the development of an autonomous rover system
-        capable of navigating rough terrain while identifying and classifying
-        rock samples using radiation and ultrasound sensing technologies.
-      </p>
-
-      <p>
-        The rover integrated embedded systems, sensor fusion, robotics control,
-        and autonomous navigation algorithms for environmental exploration tasks.
-      </p>
-
+    
+      <div class="project-content">
+    
+        <img src="images/project1.png" alt="Moon Rover Project">
+    
+        <div class="project-text">
+    
+          <p>
+            This project involved the development of an autonomous rover system
+            capable of navigating rough terrain while identifying and classifying
+            rock samples using radiation and ultrasound sensing technologies.
+          </p>
+    
+          <p>
+            The rover integrated embedded systems, sensor fusion, robotics control,
+            and autonomous navigation algorithms for environmental exploration tasks.
+          </p>
+    
+        </div>
+    
+      </div>
+    
     </div>
 
     <!-- PROJECT 2 -->
