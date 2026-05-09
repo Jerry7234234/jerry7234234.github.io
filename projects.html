@@ -367,11 +367,11 @@
 
       <div class="pdf-dropdown">
 
-        <button onclick="togglePDFs()">
+        <button onclick="togglePDFs('pdfMenu1')">
           View Project Documents ▼
         </button>
       
-        <div class="pdf-links" id="pdfMenu">
+        <div class="pdf-links" id="pdfMenu1">
           <a href="https://jerry7234234.github.io/documents/Y2_Group_Project_Group_Minotaur_s_Thread 2.pdf"
              target="_blank">
              Project Report PDF
@@ -441,11 +441,11 @@
 
       <div class="pdf-dropdown">
 
-        <button onclick="togglePDFs()">
+        <button onclick="togglePDFs('pdfMenu2')">
           View Project Documents ▼
         </button>
       
-        <div class="pdf-links" id="pdfMenu">
+        <div class="pdf-links" id="pdfMenu2">
           <a href="https://jerry7234234.github.io/documents/Movender_Final_Report.pdf"
              target="_blank">
              Project Report PDF
@@ -515,11 +515,11 @@
 
       <div class="pdf-dropdown">
 
-        <button onclick="togglePDFs()">
+        <button onclick="togglePDFs('pdfMenu3')">
           View Project Documents ▼
         </button>
       
-        <div class="pdf-links" id="pdfMenu">
+        <div class="pdf-links" id="pdfMenu3">
           <a href="https://jerry7234234.github.io/documents/EEE_FinalYearProject_FinalReport_MengjieZhang_02041373.pdf"
              target="_blank">
              Project Report PDF
@@ -537,8 +537,9 @@
   </section>
 
 <script>
-  function togglePDFs() {
-    const menu = document.getElementById("pdfMenu");
+  function togglePDFs(menuId) {
+
+    const menu = document.getElementById(menuId);
 
     if (menu.style.display === "block") {
       menu.style.display = "none";
